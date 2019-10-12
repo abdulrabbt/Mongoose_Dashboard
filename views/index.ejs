@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Animal Dashboard</h1>
+    <% for(let animal of allAnimals){%>
+        <img src="<%= animal.img%>" alt="">
+        <p>Name: <%= animal.name %></p>
+        <p>ID: <%= animal.id %></p>
+        <a href="/mongooses/<%= animal.id %>">Show</a> <br>
+    <% } %>
+    <a href="/mongooses/new">Add Animal</a>
+</body>
+</html>
